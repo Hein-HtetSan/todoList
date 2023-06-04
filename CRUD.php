@@ -81,7 +81,7 @@
     }
 
     if(isset($_POST['edit_task_name'])){
-        $task_name_d = 'd-none';
+        
     }
 
     
@@ -140,7 +140,7 @@
                                         </div>
                                         <div class='d-flex align-items-center justify-content-end'>
                                             <input type='hidden' name='get_task_name' value='{$row['Id']}'>
-                                            <button class='btn btn-sm btn-info me-2 text-light' name='edit_task_name'>Edit</button>
+                                            <a class='btn btn-sm btn-info me-2 text-light' href='./update_task.php?id={$row['Id']}&name={$card_name}'>Edit</a>
                                             <a href='./delete.php?id={$row['Id']}&name={$card_name}' class='btn btn-sm btn-danger text-light'>Remove</a>
                                         </div>
                                     </div>
