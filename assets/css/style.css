@@ -1,0 +1,80 @@
+
+
+:root{
+    --primary-color: #11009e;
+    --secondary-color: #4942e4;
+    --third-color: #8696fe;
+    --fourth-color: #c4b0ff;
+    --white: #fff;
+    --black: #333;
+}
+
+.first{
+    background-color: var(--fourth-color);
+}
+
+
+.user-login{
+    background-color: var(--white);
+    width: 35px;
+    height: 35px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1px solid var(--primary-color);
+    cursor: pointer;
+    color: var(--primary-color);
+}
+
+.new-card{
+    cursor: pointer !important;
+    box-shadow: .5px 1px 2px #999;
+}
+
+.new-card:hover{
+    box-shadow: 1px 1px 6px #999;
+}
+
+.create-btn{
+    border: none !important;
+    background-color: none !important;
+}
+
+.modal{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+}
+
+.color-box{
+    width: 100%;
+    height: 3rem;
+}
+
+#card-title-getch{
+    border-radius: 5px;
+    text-indent: 4px;
+    outline: none;
+    border: 1px solid #999;
+}
+
+/* input[type=color]{ */
+    /* -webkit-appearance: none;
+    appearance: none;
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+} */
+
+.main-field{
+    width: 100%;
+    height: auto;
+    background-color: #999;
+}
