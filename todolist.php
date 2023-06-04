@@ -15,6 +15,13 @@
 <?php
         
     require_once("./helper/base.php");
+
+    session_start();
+
+    if(isset($_POST['delete_btn'])){
+        $_SESSION['card_title'] = $_POST['card_title_name'];
+        header('location:./CRUD.php');
+    }
     
     if(isset($_POST['create_btn'])){
         header('location:./createCard.php');
@@ -74,21 +81,22 @@
 
         echo "
             <div class='col-6 col-md-4 col-lg-2 mb-3'>
+            <form method='POST'>
+                <input type='hidden' name='card_title_name' value='{$second_table_arr[$i]}'>
                 <div class='card new-card position-relative' style='background-color: {$card_color}; '>
                     <div class='card-header' style='color: #fff'>
                         {$second_table_arr[$i]}
                     </div>
                     <div class='card-body d-flex align-items-center justify-content-center'>
-                        <button name='create_btn' class='create-btn' style='background-color:{$card_color} !important;'><i class='fa-regular fa-plus fs-5' style='color: {$card_color}; background-color: {$card_color};'></i></button>
+                        <button class='create-btn' style='background-color:{$card_color} !important;'><i class='fa-regular fa-plus fs-5 disabled' style='color: {$card_color}; background-color: {$card_color};'></i></button>
                     </div>
                     <div class='card-footer d-flex align-items-center justify-content-end'>
-                        <a href='./CRUD.php?table_name={$second_table_arr[$i]}'>
-                            <button class='btn btn-light btn-sm' name='delete_btn'>
+                            <button class='btn btn-light btn-sm ' name='delete_btn'>
                                 <i class='fa-solid fa-pen' style='color: {$card_color}'></i>
                             </button>
-                        </a>
                     </div>
                 </div>
+            </form>
             </div>
         ";
     }
